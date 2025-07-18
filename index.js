@@ -29,9 +29,16 @@ do {
     console.log("O Herói de nome " + nomeHeroi + " está no nível de " + tierHeroi)
 
     let verificarNovoHeroi = prompt("Deseja verificar o tier de um novo Heroi? (s / n)");
-    if (verificarNovoHeroi == "S" || verificarNovoHeroi == "s") {
-        reiniciarLoop = true;
-    } else {
-        reiniciarLoop = false;
+    switch(verificarNovoHeroi){
+        case "S":
+        case "s":
+        case "sim":
+        case "Sim":
+        case "SIM":
+            reiniciarLoop = true;
+            break;
+        default:
+            reiniciarLoop = false;
+            break;
     }
 }while(reiniciarLoop == true)
